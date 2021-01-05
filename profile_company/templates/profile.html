@@ -1,0 +1,72 @@
+{% extends "home.html" %} {% block main %}
+<div class="row">
+  <div class="col-8">
+    <div class="row">
+      {% for i in infor %}
+      <table class="table col-6">
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>{{i.companyName}}</td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>{{i.country}}</td>
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td>{{i.price}}</td>
+          </tr>
+          <tr>
+            <td>Beta</td>
+            <td>{{i.beta}}</td>
+          </tr>
+          <tr>
+            <td>CEO</td>
+            <td>{{i.ceo}}</td>
+          </tr>
+          <tr>
+            <td>Range</td>
+            <td>{{i.range}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class=" table col-6">
+        <tbody>
+          <tr>
+            <td >Code</td>
+            <td>{{i.symbol}}</td>
+          </tr>
+          <tr>
+            <td>Link</td>
+            <td><a href="{{i.exchange}}"> Click here</a></td>
+          </tr>
+          <tr>
+            <td>Market Cap</td>
+            <td>{{i.mktCap}}</td>
+          </tr>
+          <tr>
+            <td>Volume</td>
+            <td>{{i.volAvg}}</td>
+          </tr>
+          <tr>
+            <td>Currency</td>
+            <td>{{i.currency}}</td>
+          </tr>
+          <tr>
+            <td>Start</td>
+            <td>{{i.ipoDate}}</td>
+          </tr>
+        </tbody>
+      </table>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-4">
+    {% for i in infor %}
+    <img src="{{i.image}}" alt="Logo Company" style="width: 100%;"/>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock main %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content%}
+<div class="header d-flex justify-content-center py-4">
+  <h1>SEARCH FINANCE</h1>
+</div>
+<div class="container">
+  <div class="row" style="min-height: 800px;">
+    <div class="col" style="background-color: #b0bec5">
+      <form action="." method="GET" class="form-horizontal">
+          {{ form}}
+        <input type="submit" value="Search" />
+      </form>
+      
+      <div class="option_bar row my-2">
+        <span class="option col text-center py-2"><a href="/Profile">Profile</a> </span>
+        <span class="option col text-center py-2"><a href="/IB">Finance Now</a> </span>
+        <span class="option col text-center py-2"> <a href="/History">History</a></span>
+      </div>
+      {% block main %}
+  
+      {% endblock %}
+    </div>
+   
+  </div>
+</div>
+<footer>
+  <p class="mb-1">© 2020 DTV Company.</p>
+  <p class="my-1">Email: vang.dt3856@gmail.com</p>
+  <address class="my-0">So 1, Dai Co Viet, Ha Noi, Viet Nam</address>
+</footer>
+{% endblock %} 
+
+{% block style %}
+
+<style>
+  body {
+    background-color: #eceff1;
+  }
+  .header {
+    background-color: #90a4ae;
+  }
+  .option_bar {
+    background-color: #455a64;
+  }
+  .option {
+    height: 44px;
+    color: white;
+  }
+  .option:hover {
+    background-color: #90a4ae;
+    color: black;
+  }
+  footer {
+    background-color: #90a4ae;
+  }
+</style>
+
+{% endblock style %}

@@ -1,0 +1,32 @@
+{% extends "home.html" %} 
+{% block main %}
+<h2 style="text-align: center;">{{company}}</h2>
+<p style="text-align: center;">Update 1 minute</p>
+<div class="table-responsive-sm">
+  <table class="table">
+  <thead style="background-color: #6666ff;">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Open</th>
+      <th scope="col">Low</th>
+      <th scope="col">High</th>
+      <th scope="col">Close</th>
+      <th scope="col">Volume</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in history %}
+    <tr>
+      <th>{{i.date}}</th>
+      <th>{{i.open}}</th>
+      <th>{{i.low}}</th>
+      <th>{{i.high}}</th>
+      <th>{{i.close}}</th>
+      <th>{{i.volume}}</th>
+     {% endfor %}
+    </tr>
+    
+  </tbody></div>
+
+</table>
+{% endblock main %}
